@@ -26,7 +26,7 @@ const Buttons = styled.div`
 const ButtonGroup = styled.div`
     display: flex;
     margin-bottom: 30px;
-    @media (max-width 786px) {
+    @media (max-width: 786px) {
         flex-direction: column;
     }
 `;
