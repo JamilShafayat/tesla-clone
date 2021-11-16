@@ -12,6 +12,7 @@ const Wrap = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-image: ${props => `url("images/${props.bgImg}")`};
 `;
 
 const ItemText = styled.div`
@@ -58,20 +59,20 @@ const DownArrow = styled.img`
     overflow-x: hidden;
 `;
 
-function Section() {
+function Section({title, description, backgroundImg, leftBtnText, rightBtnText}) {
     return (
-        <Wrap>
+        <Wrap bgImg={backgroundImg}>
             <ItemText>
-                <h1>Model S</h1>
-                <p>Order online for Touchless Delivery</p>
+                <h1>{ title }</h1>
+                <p>{ description }</p>
             </ItemText>
             <Buttons>
                 <ButtonGroup>
                     <LeftButton>
-                        Custom Order
+                        { leftBtnText }
                     </LeftButton>
                     <RightButton>
-                        Existing Inventory
+                        { rightBtnText }
                     </RightButton>
                 </ButtonGroup>
                 <DownArrow src="/images/down-arrow.svg" />
